@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CV-Builder</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-2 py-2 ">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">CV-Builder</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="cv-builder.html">Start Building CV</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div id="cv-form" class="container">
+    <main>
+      <div class="container">
+        <h1 class="text-center my-3">Create Your Professional CV with Ease</h1>
+        <p class="text-center">Welcome to our CV builder, where you can create a standout CV that grabs attention and
+          impresses
+          employers. Build your personalized CV effortlessly, highlighting your skills, experience, and
+          achievements in a professional format.</p>
+      </div>
+
+      <div class="container">
+
+        <div class="row">
+          <div class="col-md-6">
+            <!-- first Collumn -->
+            <h3>Personal Information</h3>
+            <!-- Name -->
+            <div class="form-group">
+              <div class="mb-3">
+                <label for="namefield" class="form-label">Enter Name</label>
+                <input type="text" class="form-control" id="namefield" placeholder="Enter Your Name">
+              </div>
+            </div>
+            <!-- Contact Number -->
+            <div class="form-group">
+              <div class="mb-3">
+                <label for="contactfield" class="form-label">Enter Contact Number</label>
+                <input type="number" class="form-control" id="contactfield" placeholder="Enter Your Contact Number">
+              </div>
+            </div>
+
+            <!-- Address -->
+            <div class="form-group">
+              <div class="mb-3">
+                <label for="addressfield" class="form-label">Enter Address</label>
+                <textarea class="form-control" id="addressfield" placeholder="Enter Your Address" rows="3"></textarea>
+              </div>
+            </div>
+
+            <div class="form-group mt-2">
+              <label for="imgfield">Select Your photo</label>
+              <input type="file" name="" id="imgfield" class="form-control">
+            </div>
+            <!-- 
+            <div class="form-group">
+              <div class="mb-3">
+                <label for="addressfield" class="form-label">Enter Address</label>
+                <input type="number" class="form-control" id="addressfield" placeholder="Enter Your Address ">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="mb-3">
+                <label for="addressfield" class="form-label">Enter Address</label>
+                <input type="number" class="form-control" id="addressfield" placeholder="Enter Your Address ">
+              </div>
+            </div> -->
+
+          </div>
+
+          <!-- second Collumn -->
+          <div class="col-md-6">
+            <h3>Professional Information</h3>
+            <!-- Objective -->
+            <div class="form-group">
+              <div class="mb-3">
+                <label for="objectivefield" class="form-label">Enter Objective</label>
+                <input type="text" class="form-control " id="objectivefield" placeholder="Enter Your Objective ">
+              </div>
+            </div>
+
+            <!-- Work Expirence -->
+            <div class="form-group">
+              <div class="mb-3" id="we">
+                <label for="expirencefield" class="form-label">Enter Expirence</label>
+                <textarea class="form-control weField" id="expirencefield"
+                  placeholder="Enter Your Expirence "></textarea>
+              </div>
+            </div>
+
+            <div class="text-center mt-2 container" id="weAddButton">
+              <button onclick="addNewWEField()" class="btn btn-primary btn-sm">Add</button>
+            </div>
+
+
+            <!-- Academic qualification -->
+            <div class="form-group">
+              <div class="mb-3" id="aq">
+                <label for="educationfield" class="form-label">Enter Your Academic Qualification</label>
+                <textarea class="form-control aqField" id="educationfield"
+                  placeholder="Enter Your Expirence "></textarea>
+              </div>
+            </div>
+            <div class="text-center mt-2 container" id="aqAddButton">
+              <button onclick="addNewAQField()" class="btn btn-primary btn-sm">Add</button>
+            </div>
+
+
+          </div>
+        </div>
+
+        <button class="btn btn-primary btn-lg" onclick="generateCV()">Generate CV</button>
+      </div>
+      <!-- </div> -->
+    </main>
+
+
+  </div>
+  <div class="container" id="cv-template">
+    <div class="row">
+      <div class="col-md-4 text-center py-5 bg">
+        <!-- First Collumn -->
+        <img src="img/dp.png" alt="Loading Image" class="img-fluid myimg" id="imgT">
+        <div class="container">
+          <p id="nameT1">Arya Vishal Yogeshbhai</p>
+          <p id="contactT">+91 7984832995</p>
+          <p id="addressT">Ahmedabad, Gujrat, India</p>
+          <!-- <p>vishalarya1706@gmail.com</p> -->
+          <hr />
+        </div>
+      </div>
+
+
+      <div class="col-md-8 py-5">
+        <!-- second Collumn -->
+        <h1 class="text-center" id="nameT2" style="font-weight: 980;">Arya Vishal Yogeshbhai</h1>
+
+        <!-- Objective -->
+        <div class="card mt-4">
+          <div class="card-header bg">
+            <h3>Objective</h3>
+          </div>
+          <div class="card-body ">
+            <p id="objectiveT">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, cupiditate nihil ea unde
+              repellendus molestias ipsam consequatur nam magnam eaque? Modi saepe delectus voluptas sunt soluta natus
+              cum perferendis dicta eveniet est. Ab, illo.</p>
+          </div>
+        </div>
+
+        <!-- Work Expirence -->
+        <div class="card mt-4">
+          <div class="card-header bg">
+            <h3>Work Expirence</h3>
+          </div>
+          <div class="card-body ">
+            <ul id="weT">
+              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, doloribus.</li>
+              <li>Totam incidunt fugit expedita nesciunt ducimus ut doloremque, error architecto.</li>
+              <li>Possimus tempore quibusdam omnis tempora iste cumque laboriosam harum facilis!</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Academic Qualification -->
+        <div class="card mt-4">
+          <div class="card-header bg">
+            <h3>Academic Qualification</h3>
+          </div>
+          <div class="card-body ">
+            <ul id="aqT">
+              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, doloribus.</li>
+              <li>Totam incidunt fugit expedita nesciunt ducimus ut doloremque, error architecto.</li>
+              <li>Possimus tempore quibusdam omnis tempora iste cumque laboriosam harum facilis!</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="container text-center mt-3">
+          <button class="bg btn" onclick="editcv()">Edit CV</button>
+          <button class="btn bg" onclick="printcv()">
+            Print CV
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer bg-dark text-light mt-5 py-3">
+    <div class="container text-center">
+      <span>CV Builder &copy; 2023. All rights reserved.</span>
+    </div>
+  </footer>
+
+
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+    integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/docxtemplater/3.22.1/docxtemplater.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,120 @@
+/* nav,main{
+     display: none !important;
+} */
+#cv-template {
+     display: none;
+}
+
+.myimg {
+     border-radius: 50%;
+     border: 2px solid black;
+     width: 200px;
+}
+
+.bg {
+     background-color: aqua;
+}
+
+
+
+
+
+
+@media print {
+     .opacity-print-0 {
+          opacity: 0 !important;
+     }
+
+     .opacity-print-25 {
+          opacity: .25 !important;
+     }
+
+     .opacity-print-50 {
+          opacity: .5 !important;
+     }
+
+     .opacity-print-75 {
+          opacity: .75 !important;
+     }
+
+     .opacity-print-100 {
+          opacity: 1 !important;
+     }
+}
+
+@media print {
+
+     /* Hide the navigation bar */
+     .navbar {
+          display: none;
+     }
+
+     /* Adjust spacing and font size for printing */
+     .container,
+     .card-body,
+     ul {
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+          margin-bottom: 10px !important;
+          font-size: 12px !important;
+     }
+
+     /* Adjust image size for printing */
+     .img-fluid.myimg {
+          max-width: 150px !important;
+          max-height: 150px !important;
+     }
+
+     /* Change position and background color of specific elements */
+     .col-md-4 {
+          float: right !important;
+          background-color: #f2f2f2 !important;
+          padding: 20px !important;
+     }
+
+     .col-md-8 {
+          float: left !important;
+          background-color: #ffffff !important;
+          padding: 20px !important;
+     }
+
+     /* Ensure elements maintain their position */
+     .form-control.weField,
+     .form-control.aqField {
+          display: block !important;
+          width: 100% !important;
+          margin-bottom: 10px !important;
+     }
+
+     /* Preserve color of the image */
+     #imgT {
+          filter: none !important;
+     }
+}
+
+
+
+
+/* Adjust image size for printing */
+.img-fluid.myimg {
+     max-width: 150px !important;
+     max-height: 150px !important;
+}
+
+/* Change position and background color of col-md-4 and col-md-8 */
+.col-md-4 {
+     float: right !important;
+     background-color: #f2f2f2 !important;
+     padding: 20px !important;
+}
+
+.col-md-8 {
+     float: left !important;
+     background-color: #ffffff !important;
+     padding: 20px !important;
+}
+
+/* Preserve color of the image */
+#imgT {
+     filter: none !important;
+}
